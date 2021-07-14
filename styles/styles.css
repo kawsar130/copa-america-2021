@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
+/* Main font defined in body */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
+/* header container */
 .header-container {
     display: flex;
     flex-direction: column;
     background: #2D25A0;
     width: 100%;
 }
-
+/* navigation bar */
 .navbar {
     display: flex;
     justify-content:center;
@@ -44,7 +46,7 @@ body {
 .user-button {
     margin-right: 8px;
 }
-
+/* header cover photo and title section */
 .header-cover-area {
     display: flex;
     justify-content: center;
@@ -78,11 +80,11 @@ body {
 
 .header-image img {
     width: 556px;
-    height: 438px;
     padding-bottom: 86px;
     transition: transform 1s ease;
 }
 
+/* player grid design */
 .player-container {
     padding: 70px 195px;
     display: flex;
@@ -117,6 +119,7 @@ body {
     line-height: 40px;
 }
 
+/* highlight section design */
 .highlights {
     display: flex;
     align-items: center;
@@ -138,6 +141,7 @@ body {
     width: 567px;
 }
 
+/* article section design */
 .article-container {
     display: flex;
     flex-direction: column;
@@ -153,6 +157,8 @@ body {
 .article-header h4 {
     padding: 20px 20px;
     margin-bottom: 0;
+    border-top: 2px dotted #2D25A0;
+    border-right: 2px dotted #2D25A0;
 }
 
 .article-header .rel-art {
@@ -184,6 +190,7 @@ body {
     width: 330px;
 }
 
+/* news-shelter design */
 .news-shelter {
     display: flex;
     justify-content: center;
@@ -212,6 +219,7 @@ body {
     border: 3px solid rgb(110, 179, 202);
 }
 
+/* footer design */
 .footer-container {
     display: flex;
     flex-direction: column;
@@ -231,3 +239,66 @@ body {
 .copyright-text small {
     font-size: 18px;
 }
+
+/* ---------------------------------
+responsive design starts here
+Break point: 0-688px for mobile, 689px-992px for tablet, 993px or more for desktop
+------------------------------------ */
+
+@media only screen and (max-width: 992px) {
+    .header-cover-area {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .header-title {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .header-image img {
+        width: 329px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .players, .article {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights {
+        flex-direction: column;
+    }
+
+    .highlight-info .h-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .highlights .highlight-image img {
+        width: 328px;
+    }
+
+    .footer-container .logo img {
+        width: 271px;
+    }
+
+    .art-hr {
+        width: 90vw;
+    }
+
+    .shelter-container, .shelter-container input {
+        width: 70vw;
+    }
+
+
+
+
+
+
+
+    .navbar {
+        display: none;
+    }
+  }
